@@ -1,0 +1,54 @@
+import java.util.*;
+
+class Guesser {
+        Scanner input = new Scanner(System.in);
+
+        public static void main(String[] args){
+                new Guesser();
+        } // end main
+
+        public Guesser(){
+                boolean keepGoing = true;
+                String response = "";
+                while (keepGoing){
+                        response = menu();
+                        if (response.equals("0")){
+                                keepGoing = false;
+                        } else if (response.equals("1")){
+                                humanGuesser();
+                        } else if (response.equals("2")){
+                                computerGuesser();
+                        } else {
+                                System.out.println("Try that again...");
+                                
+                        } // end if
+                        
+                } // end while
+        } // end Constructor
+
+        public String menu(){
+                System.out.println("Choose  0, 1, or 2 to play!");
+                String response = "";
+                System.out.println();
+                System.out.println("0) quit");
+                System.out.println("1) Human Guesser");
+                System.out.println("2) Computer Guesser");
+
+                System.out.print("0, 1, or 2: ");
+                response = input.nextLine();
+                return response;
+        } // end menu
+
+        public void humanGuesser(){
+                System.out.println("Human Guesser");
+                boolean keepGoing = true;
+                while (keepGoing){
+                    
+                } //end while
+        } // end humanGuesser
+
+        public void computerGuesser(){
+                System.out.println("Computer Guesser");
+        } // end computerGuesser
+
+} // end class
